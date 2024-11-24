@@ -1,0 +1,240 @@
+body {
+    background-color: black;
+    color: #ffffff;
+}
+
+.sidebar-nav{
+    margin-top: 60px;
+    border-right: #ffffffa4 solid 0.7px;
+
+
+  
+}
+
+.sidebar-nav, ul {
+    font-size: 20px;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    color: #ffffff;
+  }
+
+.sidebar-nav, ul > li {
+    padding-top: 6px;
+  }
+
+.sidebar-nav, ul > li:hover {
+    background-color: #0000008a;
+    opacity: 0.8;
+}
+
+.sidebar-nav, ul > li, a {
+    text-decoration: none;
+    color: #ffffff;
+    text-align: left;
+}
+.sidebar-nav, ul > li, a, i {
+    margin-right: 10px;
+    padding-right: 8px;
+
+}
+
+.main {
+    padding: 10px;
+    margin-top: 60px;
+}
+
+
+/* Post List */
+
+.main .newsfeed {
+    padding: 10px;
+    margin-top: 40px;
+    border: #ffffffa4 solid 0.7px;
+    border-radius: 6px;
+    
+}
+
+.main .newsfeed .useraccount {
+    display: flex;
+    align-items: center;
+
+    width: 50%;
+
+}
+
+.main .newsfeed .useraccount > * {
+    margin-right: 8px;
+}
+
+.main .newsfeed .useraccount > strong {
+    font-size: 16px;
+    
+}
+
+
+.main .newsfeed .useraccount > img  {
+    width: 30px;
+    height: auto;
+}
+
+.main .newsfeed .caption p {
+    margin-top: 20px;
+    font-size: 18px;
+}
+
+.right-side-bar {
+    border-left: #ffffffa4 solid 0.7px;
+
+}
+
+
+/* Post Detail Style */
+
+
+.post-detail {
+    padding: 10px;
+
+
+    border-bottom: #ffffffa4 solid 0.4px;
+
+
+}
+
+.post-detail .useraccount {
+    display: flex;
+    align-items: center;
+
+    width: 50%;
+
+}
+
+.post-detail .user-handle {
+    font-weight: 200;
+    color: #f1f1f1c2;
+    font-size: medium;
+
+    display: flex;
+    align-items: flex-start;
+}
+
+.post-detail .useraccount > * {
+    margin-right: 8px;
+}
+
+.post-detail .useraccount > img  {
+    width: 50px;
+    height: auto;
+}
+
+.post-detail .caption p {
+    margin-top: 20px;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.post-detail .datetime {
+    font-weight: 200;
+    color: #f1f1f1c2;
+    font-size: medium;
+
+    display: flex;
+}
+
+.post-detail .datetime > * {
+    margin-right: 5px;
+}
+
+.comment-section {
+ margin-left: -28px;
+}
+
+.comment-section .comment-feeds {
+    display: flex;
+    align-items: center;
+
+    border-top: #ffffffa4 solid 0.7px;
+    margin-top: 10px;
+
+    padding-top: 15px;
+    padding-left: 28px;
+    font-size: 16px;
+
+
+}
+
+.comment-section h4 {
+    margin: 6px 0;
+    margin-left: 28px;
+
+
+}
+
+.comment-section .comment-feeds > img {
+    width: 40px;
+    height: auto;
+}
+
+.comment-section .comment-feeds strong {
+    font-size: 16px;
+}
+
+.comment-section .comment-feeds > * {
+    margin-right: 12px;
+}
+
+.comment-section .caption p {
+    padding-left: 28px;
+    padding-top: 10px;
+    font-size: 16px;
+}
+
+.comment-section .caption strong {
+   
+}
+
+.empty-comment-msg {
+    padding-left: 28px;
+    padding-top: 10px;
+    font-size: 16px;
+}
+
+.comment-section, hr, p, button {
+    margin-left: 6px;
+
+}
+
+/* User Account Post List View */
+
+.account-profile {
+    border-bottom: #ffffffa4 solid 0.7px;
+
+}
+.account-profile .useraccount {
+        align-items: center;
+    
+        width: 50%;
+
+}
+
+.account-profile .useraccount > img  {
+    width: 120px;
+    height: auto;
+
+    margin-bottom: 15px;
+}
+
+.account-profile  .user-bio p {
+    margin-top: 20px;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+/* Authentication Style */
+#logout-form {
+    display: inline;
+  }
+  #logout-form button {
+    padding: 0;
+    margin: 0;
+  }

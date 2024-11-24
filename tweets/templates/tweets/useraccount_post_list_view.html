@@ -1,0 +1,42 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+  <h3 class="post-detail-nav"> <a href="{% url 'homefeeds' %}"><i class="fa-solid fa-arrow-left"></i></a> {{ useraccount }}</h3>
+ 
+    <div class="container account-profile">
+      <div class="useraccount">
+        <img src="https://firebasestorage.googleapis.com/v0/b/instagram-firebase-25884.appspot.com/o/circle-user-regular-light.svg?alt=media&token=0e2e0b6f-6332-4871-ada9-5fe1848bf83c" alt="">
+        <div>
+          <strong>{{ useraccount }}</strong>
+          <p class="user-handle">@{{ useraccount }}</p>
+        </div>
+      </div>
+      <div class="user-bio">
+        <p> {{ useraccount.bio }}</p>
+      </div>
+      <h5>Posts</h5>
+    </div>
+
+    {% if post_list %}
+    {% for post in post_list %}
+    <div class="container newsfeed">
+      <div class="useraccount">
+        <img src="https://firebasestorage.googleapis.com/v0/b/instagram-firebase-25884.appspot.com/o/circle-user-regular-light.svg?alt=media&token=0e2e0b6f-6332-4871-ada9-5fe1848bf83c" alt="">
+        <strong>{{ post.useraccount }}</strong>
+        <span>·</span>
+        <label>{{ post.post_date }}</label>
+      </div>
+      <div class="caption">
+        <p>{{ post.caption }}</p>
+      </div>
+      <div class="d-grid gap-2">
+        <button class="btn btn-dark" type="button"> <a href="{{ post.get_absolute_url }}">More Details <i class="fa-solid fa-chevron-down"></i></a> </button>
+      </div>
+    </div>
+    {% endfor %}
+
+    {% else %}
+    <p>There is no any post.</p>
+    {% endif %}
+
+{% endblock %}
