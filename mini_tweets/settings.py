@@ -35,10 +35,10 @@ DEBUG = True
 # DEBUG = os.environ.get('DJANGO_DEBUG', '') != 'False'
 
 # Set hosts to allow any app on Railway and the local testing URL
-ALLOWED_HOSTS = ['web-production-92fc1.up.railway.app','127.0.0.1']
+ALLOWED_HOSTS = ['tweets.pythonanywhere.com','127.0.0.1']
 
 # Set CSRF trusted origins to allow any app on Railway and the local testing URL
-CSRF_TRUSTED_ORIGINS = ['https://web-production-92fc1.up.railway.app']
+CSRF_TRUSTED_ORIGINS = ['https://tweets.pythonanywhere.com']
 
 
 # Application definition
