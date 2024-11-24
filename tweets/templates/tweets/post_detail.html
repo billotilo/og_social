@@ -1,0 +1,54 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+  <h3 class="post-detail-nav"> <a href="{% url 'homefeeds' %}"><i class="fa-solid fa-arrow-left"></i></a> Post</h3>
+ 
+  <div class="container post-detail">
+      <div class="useraccount">
+        <img src="https://firebasestorage.googleapis.com/v0/b/instagram-firebase-25884.appspot.com/o/circle-user-regular-light.svg?alt=media&token=0e2e0b6f-6332-4871-ada9-5fe1848bf83c" alt="">
+        <div>
+          <strong>{{ post.useraccount }}</strong>
+          <p class="user-handle">@{{ post.useraccount }}</p>
+        </div>
+      </div>
+      <div class="caption">
+        <p>{{ post.caption }}</p>
+      </div>
+      <div class="datetime">
+        <p> {{ post.post_date }} </p>
+        <div>·</div>
+        <p>8:00 AM</p>
+      </div>
+    </div>
+
+    <div class="comment-section">
+      <h4>Comments</h4>
+    
+      
+
+      {% for comment in post.postcomment_set.all %}
+
+      <div class="comment-feeds">
+        <img src="https://firebasestorage.googleapis.com/v0/b/instagram-firebase-25884.appspot.com/o/circle-user-regular-light.svg?alt=media&token=0e2e0b6f-6332-4871-ada9-5fe1848bf83c" alt="">
+        <div>
+          <strong>{{ comment.useraccount }}</strong>
+          <span>·</span>
+          <label>{{ comment.post_date }}</label>
+        </div>
+      </div>
+      <div class="caption">
+        <p>{{ comment.description }}</p>
+      </div>
+      {% empty %}
+      <p class="empty-comment-msg">The post has no comment.</p>
+      {% endfor %}
+
+      <hr>
+      {% if user.is_authenticated %}
+        <button class="btn btn-primary" type="button"> <a href="{% url 'comment-create' post.id %}"><i class="fa-solid fa-add"></i>Add a new comment</a> </button>
+      {% else %}
+        <p><a href="{% url 'login'%}?next={{request.path}}">Login</a> to add a new comment</p>
+      {% endif %} 
+    </div>
+
+{% endblock %}
